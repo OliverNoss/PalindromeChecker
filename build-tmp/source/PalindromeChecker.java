@@ -32,8 +32,26 @@ public void setup()
 }
 public boolean palindrome(String word)
 {
-  //your code here
-  return false;
+  String charOnly = "";
+  for (int i = 0; i<word.length(); i++)
+  {
+    char x = word.charAt(i);
+    if (x != '!' && x != '.' && x != ',' && x != '?' && x != ' ' && x != '\'')
+      charOnly += x;
+  }
+
+  String wordFinal = charOnly.toLowerCase();
+  boolean retValue = true;
+  for (int i = 0; i<wordFinal.length(); i++)
+  {
+    if (wordFinal.charAt(i) != wordFinal.charAt(wordFinal.length()-i-1))
+    {
+      retValue=false;
+    }
+
+
+  }
+  return retValue;
 }
 
   static public void main(String[] passedArgs) {
