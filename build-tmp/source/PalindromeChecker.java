@@ -36,7 +36,10 @@ public boolean palindrome(String word)
   for (int i = 0; i<word.length(); i++)
   {
     char x = word.charAt(i);
-    if (x != '!' && x != '.' && x != ',' && x != '?' && x != ' ' && x != '\'')
+    /*if (x != '!' && x != '.' && x != ',' && x != '?' && x != ' ' && x != '\'')
+      charOnly += x;
+    */
+    if (Character.isLetter(x))
       charOnly += x;
   }
 
